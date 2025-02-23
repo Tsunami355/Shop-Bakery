@@ -1,3 +1,40 @@
+/* poppins-300 - latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/poppins-v22-latin-300.woff2') format('woff2');
+}
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/poppins-v22-latin-regular.woff2') format('woff2');
+}
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/poppins-v22-latin-600.woff2') format('woff2');
+}
+
+
+@font-face {
+    font-display: swap;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/poppins-v22-latin-900.woff2') format('woff2');
+}
+
+
 :root{
     --color-primary-light: #FAF4EA;
     --color-primary-dark: #31261A;
@@ -9,11 +46,20 @@
 /*********************** BASE ************************/
 
 body{
+    font-family: 'Poppins', sans-serif;
     color: var(--color-primary-dark);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
 }
 
 ul,ol{
     list-style-type: none;
+    text-decoration: none;
+}
+
+address{
+    font-style: normal;
 }
 
 
@@ -21,6 +67,9 @@ ul,ol{
 
 /*********************** HEADER ************************/
 
+.header{
+    background-color: rgb(156, 154, 154);
+}
 .header-nav{
     display: flex;
 }
@@ -32,10 +81,12 @@ ul,ol{
 
 .nav-link{
     color: var(--color-primary-light);
+    text-decoration: none;
 }
 
-.nav-link:hover{
+.nav-link:hover,:focus{
     color: var(--color-brand-light);
+    font-weight: 600;
 }
 
 .button{
@@ -45,17 +96,21 @@ ul,ol{
     border-radius: 8px;
     padding: 16px 32px;
     cursor: pointer;
+    font-weight: 600;
 }
 
 .button:hover{
     background-color:transparent;
-    color: var(--color-brang-dark);
+    color: var(--color-brand-dark);
 }
 
 /*********************** HERO ************************/
 
 .hero-title{
     color: var(--color-primary-light);
+    text-align: center;
+    font-size: 128px;
+    font-weight: 900;
 }
 
 .hero-title .accent{
@@ -63,14 +118,92 @@ ul,ol{
 }
 
 
-
+/*********************** ADVANTAGES ************************/
 
 .advantages-list{
     display: flex;
+    justify-content: space-around;
     background-color: var(--color-brand-light);
     color: var(--color-primary-light);
 }
 
+.advantages-item{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.section-title{
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 1.3;
+}
 .section-title .accent{
     color: var(--color-brand-dark);
+}
+
+/*********************** TRADITION ************************/
+
+.tradition-text .brand{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.brand{
+    color: var(--color-brand-light);
+}
+
+
+
+
+/*********************** SHEFS ************************/
+
+.chef-title{
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.chefs-text{
+
+}
+
+
+
+/*********************** FORMAT ************************/
+
+.format-title{
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--color-primary-light);
+}
+
+.format-text{
+    color: var(--color-primary-light);
+    font-weight: 300;
+    font-size: 14px;
+}
+
+
+/*********************** CONTACTS ************************/
+
+.contacts-text{
+    color: var(--color-brand-dark);
+}
+
+
+/*********************** FOOTER ************************/
+
+.address-link{
+    color: var(--color-primary-light);
+    font-weight: 300;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.address-link:hover,:focus{
+    color: var(--color-brand-light);
+}
+
+.address-copyright{
+    font-size: 14px;
+    color: #A18268;
 }
