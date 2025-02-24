@@ -45,7 +45,14 @@
 
 /*********************** BASE ************************/
 
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
 body{
+    margin: 0;
     font-family: 'Poppins', sans-serif;
     color: var(--color-primary-dark);
     font-size: 18px;
@@ -53,7 +60,15 @@ body{
     line-height: 1.5;
 }
 
+h1,h2,h3,h4,h5,h6,p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 ul,ol{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
     list-style-type: none;
     text-decoration: none;
 }
@@ -62,7 +77,17 @@ address{
     font-style: normal;
 }
 
+.section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
 
+.container{
+    width: 100%;
+    max-width: 1288px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
 
 
 /*********************** HEADER ************************/
@@ -106,6 +131,10 @@ address{
 
 /*********************** HERO ************************/
 
+.hero-section{
+    padding: 272px 0;
+}
+
 .hero-title{
     color: var(--color-primary-light);
     text-align: center;
@@ -119,6 +148,15 @@ address{
 
 
 /*********************** ADVANTAGES ************************/
+
+.hidden{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
 
 .advantages-list{
     display: flex;
@@ -143,6 +181,14 @@ address{
 
 /*********************** TRADITION ************************/
 
+.tradition-section{
+    padding-top: 96px;
+}
+
+.taditions-title{
+    margin-bottom: 42px;
+}
+
 .tradition-text .brand{
     text-transform: uppercase;
     font-weight: 600;
@@ -155,11 +201,17 @@ address{
 
 
 
-/*********************** SHEFS ************************/
+/*********************** CHEFS ************************/
+
+.chefs-title{
+    margin-bottom: 80px;
+}
 
 .chef-title{
+    margin-bottom: 16px;
     font-weight: 600;
     font-size: 40px;
+    
 }
 
 .chefs-text{
@@ -171,6 +223,10 @@ address{
 /*********************** FORMAT ************************/
 
 .format-title{
+    margin-bottom: 80px;
+}
+
+.format-article-title{
     font-weight: 600;
     font-size: 24px;
     color: var(--color-primary-light);
@@ -184,6 +240,10 @@ address{
 
 
 /*********************** CONTACTS ************************/
+
+.contacts-title{
+    margin-bottom: 16px;
+}
 
 .contacts-text{
     color: var(--color-brand-dark);
