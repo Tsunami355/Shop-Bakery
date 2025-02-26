@@ -38,8 +38,9 @@
 :root{
     --color-primary-light: #FAF4EA;
     --color-primary-dark: #31261A;
-    --color-brand-light: #819B57;
+  --color-brand-normal:#819B57;
     --color-brand-dark: #465929;
+   --color-brand-light: #CFCFBC;
 
 }
 
@@ -137,13 +138,13 @@ address{
 }
 
 .nav-link:hover,:focus{
-    color: var(--color-brand-light);
+    color: var(--color-brand-normal);
 }
 
 .button{
     color: var(--color-primary-light);
-    background-color: var(--color-brand-light);
-    border: 2px solid var(--color-brand-light);
+    background-color: var(-color-brand-normal);
+    border: 2px solid var(-color-brand-normal);
     border-radius: 8px;
     padding: 16px 32px;
     cursor: pointer;
@@ -159,6 +160,11 @@ address{
 
 .hero-section{
     padding: 272px 0;
+    background-image: url(./images/Background-hero.jpg);
+    background-color: var(--color-primary-dark);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
 }
 
 .hero-title{
@@ -169,7 +175,7 @@ address{
 }
 
 .hero-title .accent{
-    color: var(--color-brand-light);
+    color: var(-color-brand-normal);
 }
 
 
@@ -177,7 +183,7 @@ address{
 
 
 .advantages-section{
-    background-color: var(--color-brand-light);
+    background-color: var(-color-brand-normal);
     padding: 16px 0;
 }
 
@@ -236,7 +242,7 @@ address{
 }
 
 .brand{
-    color: var(--color-brand-light);
+    color: var(-color-brand-normal);
 }
 
 
@@ -247,6 +253,12 @@ address{
 .chefs-title{
     margin-bottom: 80px;
     text-align: center;
+}
+
+.chefs-title::before{
+    content: "";
+    display: block;
+    border: 2px solid var(--color-brand-light);
 }
 
 .chef-title{
@@ -298,9 +310,11 @@ address{
 
 .format-card{
     padding: 24px;
+    height: 444px;
     border: 1px solid lightgreen;
     border-radius: 16px;
     max-width: 349px;
+    background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%);
 }
 
 .format-article-title{
@@ -331,6 +345,13 @@ address{
 
 /*********************** FOOTER ************************/
 
+.footer{
+    background-image: url(./images/footer-background.png);
+    background-color: var(--color-primary-dark);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
 .address-link{
     color: var(--color-primary-light);
     font-weight: 300;
@@ -339,7 +360,7 @@ address{
 }
 
 .address-link:hover,:focus{
-    color: var(--color-brand-light);
+    color: var(-color-brand-normalt);
 }
 
 .address-copyright{
