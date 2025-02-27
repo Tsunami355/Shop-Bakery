@@ -311,6 +311,31 @@ address{
     margin-bottom: 80px;
 }
 
+.carousel-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color:transparent;
+    border: 1px solid var(--color-primary-dark);
+    cursor: pointer;
+}
+
+.carousel-arrow{
+    fill: var(--color-primary-dark);
+}
+
+.carousel-button:hover,:focus{
+    background-color: var(--color-primary-dark);
+}
+
+.carousel-button:hover
+.carousel-arrow, .carousel-button:focus .carousel-arrow{
+    fill: var(--color-primary-light);
+}
+
 .format-list{
     display: flex;
     gap: 20px;
@@ -326,7 +351,7 @@ address{
 .format-card{
     padding: 24px;
     height: 444px;
-    border: 1px solid lightgreen;
+    border: 1px solid lightgreen; /*remuve*/
     border-radius: 16px;
     max-width: 349px;
     background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%);
@@ -379,7 +404,11 @@ address{
 }
 
 .address-social{
-    
+    fill: var(--color-primary-light);
+}
+
+.address-social:hover,:focus {
+    fill: var(--color-brand-normal);
 }
 
 .address-copyright{
