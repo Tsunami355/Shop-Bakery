@@ -76,6 +76,10 @@ ul,ol{
     text-decoration: none;
 }
 
+a {
+ display: inline-block;
+}
+
 address{
     font-style: normal;
 }
@@ -279,18 +283,17 @@ address{
 
 .chefs-list{
     display: flex;
-    gap: 20px;
-    justify-content: space-between;
+    gap: 40px 30px;
+    flex-wrap: wrap;
 }
 
 .chefs-item{
-    flex-basis: calc((100%-20px)/2);
+    flex-basis: calc((100% - 30px) / 2);
 }
 
 .chefs-card{
     display: flex;
-    max-width: 605px;
-    gap: 20px;
+    gap: 30px;
 }
 
 .chefs-image{
@@ -299,8 +302,8 @@ address{
     box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
 }
 
-.chefs-text{
-    margin-bottom: 16px;
+.chefs-text p:not(:last-child){
+    margin-bottom: 24px;
 }
 
 
@@ -311,10 +314,17 @@ address{
     margin-bottom: 80px;
 }
 
+.formats-container{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
 .carousel-button{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
     width: 44px;
     height: 44px;
     border-radius: 50%;
@@ -374,6 +384,14 @@ address{
 
 /*********************** CONTACTS ************************/
 
+.contacts-section{
+    padding-bottom: 96px;
+}
+.contacts-container{
+    display: flex;
+    gap: 32px;
+}
+
 .contacts-title{
     margin-bottom: 16px;
 }
@@ -382,16 +400,53 @@ address{
     color: var(--color-brand-dark);
 }
 
+.contacts-map{
+    flex-shrink: 0;
+    border: none;
+    border-radius: 16px;
+}
 
 /*********************** FOOTER ************************/
 
 .footer{
+    padding: 32px 0;
     background-image: url(./images/footer-background.png);
     background-color: var(--color-primary-dark);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+
+.footer-container{
+    display: flex;
+    gap: 20px;
+    
+}
+
+.footer-nav{
+    flex-basis: 50%;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-logo{
+    flex-grow: 1;
+}
+
+.footer-nav-list{
+    flex-grow: 1;
+}
+
+.footer-address{
+    flex-basis: 50%;
+    display: flex;
+    gap: 20px;
+}
+
+.footer-address-list{
+    flex-grow: 1;
+}
+
 .address-link{
     color: var(--color-primary-light);
     font-weight: 300;
@@ -411,6 +466,9 @@ address{
     fill: var(--color-brand-normal);
 }
 
+.address-info{
+    flex-grow: 1;
+}
 .address-copyright{
     font-size: 14px;
     color: #A18268;
