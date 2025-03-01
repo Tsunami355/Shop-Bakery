@@ -118,7 +118,11 @@ address{
 /*********************** HEADER ************************/
 
 .header{
-    background-color: rgb(156, 154, 154);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 32px;
 }
 
 .header-container{
@@ -145,6 +149,7 @@ address{
 .nav-link{
     color: var(--color-primary-light);
     text-decoration: none;
+    transition: color .3s ease;
 }
 
 .nav-link:hover,:focus{
@@ -159,6 +164,7 @@ address{
     padding: 16px 32px;
     cursor: pointer;
     font-weight: 600;
+    transition: color .3s ease, background-color .3s ease;
 }
 
 .button:hover{
@@ -170,7 +176,7 @@ address{
 
 .hero-section{
     padding: 272px 0;
-    background-image: url(./images/Background-hero.jpg);
+    background-image: linear-gradient(102.76deg, rgba(18, 18, 17, 0.78) 2.03%, rgba(18, 18, 17, 0.6) 58.46%, rgba(18, 18, 17, 0) 90.36%),url(./images/Background-hero.jpg);
     background-color: var(--color-primary-dark);
     background-repeat: no-repeat;
     background-position: center top;
@@ -306,7 +312,6 @@ address{
 }
 
 .chefs-image{
-    /* border: 1px solid var(--color-secondary-dark); */
     border-radius: 4px 4px 4px 200px;
     box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
 }
@@ -344,6 +349,7 @@ address{
 
 .carousel-arrow{
     fill: var(--color-primary-dark);
+    transition: background-colo .3s, fill .3s;
 }
 
 .carousel-button:hover,:focus{
@@ -374,6 +380,11 @@ address{
     border-radius: 16px;
     max-width: 349px;
     background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%);
+    transition: transform 0.3s;
+}
+
+.format-card:hover{
+    transform: scale(1.1);
 }
 
 .format-article-title{
@@ -387,7 +398,6 @@ address{
     color: var(--color-primary-light);
     font-weight: 300;
     font-size: 14px;
-  
 }
 
 
@@ -396,6 +406,7 @@ address{
 .contacts-section{
     padding-bottom: 96px;
 }
+
 .contacts-container{
     display: flex;
     gap: 32px;
@@ -484,6 +495,7 @@ address{
     font-weight: 300;
     font-size: 16px;
     text-decoration: none;
+    transition: color .3s;
 }
 
 .address-link:hover,:focus{
@@ -492,6 +504,7 @@ address{
 
 .address-social{
     fill: var(--color-primary-light);
+    transition: fill .3s;
 }
 
 .address-social:hover,:focus {
@@ -511,6 +524,7 @@ address{
 /*********************** MODAL ************************/
 
 .backdrop {
+    padding: 20px 0;
     position: fixed;
     top: 0;
     right: 0;
@@ -520,6 +534,7 @@ address{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: opacity .3s, visibility .3s;
 }
 
 .backdrop.is-hidden{
@@ -529,8 +544,10 @@ address{
 }
 
 .modal {
-    width: 880px;
-    height: 880px;
+    width: 100%;
+    max-width: 880px;
+    height: 100%;
+    max-height: 880px;
     background-color: var(--color-primary-light);
     border-radius: 32px;
     position: relative;
