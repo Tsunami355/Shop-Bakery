@@ -262,8 +262,7 @@ address{
 
 .chefs-title{
     margin: 0 auto 80px;
-    max-width: 570px;
-
+    position: relative;
 }
 
 .chefs-title::before,
@@ -272,6 +271,16 @@ address{
     width: 352px;
     display: block;
     border: 2px solid var(--color-brand-light);
+    position: absolute;
+    bottom: 24px;
+}
+
+.chefs-title::before{
+    left: 0;
+}
+
+.chefs-title::after{
+    right: 0;
 }
 
 .chef-title{
@@ -415,6 +424,29 @@ address{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    position: relative;
+}
+
+.footer::before,
+.footer::after{
+    position: absolute;
+    background-repeat: no-repeat;
+    content: "";
+    bottom: 0;
+}
+
+.footer::before{
+    background-image: url(./images/bread.png);
+    width: 180px;
+    height: 120px;
+    left: 0;
+}
+
+.footer::after {
+    background-image: url(./images/bread-big.png);
+    width: 380px;
+    height: 190px;
+    right: 0;
 }
 
 .footer-container{
@@ -469,7 +501,43 @@ address{
 .address-info{
     flex-grow: 1;
 }
+
 .address-copyright{
     font-size: 14px;
     color: #A18268;
+}
+
+
+/*********************** MODAL ************************/
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backdrop.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal {
+    width: 880px;
+    height: 880px;
+    background-color: var(--color-primary-light);
+    border-radius: 32px;
+    position: relative;
+}
+
+.modal-btn-close{
+    position: absolute;
+    top: 40px;
+    right: 40px;
 }

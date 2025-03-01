@@ -35,7 +35,9 @@
               </li>
             </ul>
           </nav>
-          <button class="button" type="button">Замовити дзвінок</button>
+          <button class="button modal-btn-open" type="button">
+            Замовити дзвінок
+          </button>
         </div>
       </div>
     </header>
@@ -85,7 +87,8 @@
       <section class="section" id="chefs-section">
         <div class="container">
           <h2 class="chefs-title section-title centred">
-            Наші найкращі <span class="accent">шеф-кухарі</span>
+            Наші найкращі <br />
+            <span class="accent">шеф-кухарі</span>
           </h2>
           <ul class="chefs-list">
             <li class="chefs-item">
@@ -123,7 +126,7 @@
                   <div class="chefs-text">
                     <p>Привіт, я Влад!</p>
                     <p>
-                      Мій кодитерський стаж вже 18 років.SHOP BEKERY - це наша
+                      Мій кодитерський стаж вже 18 років. SHOP BEKERY - це наша
                       любов, з якою ми ділимось кожен раз з Вами через нашу
                       випічку!
                     </p>
@@ -276,5 +279,13 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop">
+      <div class="modal">
+        <button class="modal-btn-close" type="button">
+          <svg><use href="./images/icon.svg#icon-close"></use></svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
