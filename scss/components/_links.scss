@@ -1,0 +1,10 @@
+.nav-link {
+    color: var(--color-primary-light);
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.nav-link:hover,
+:focus {
+    color: var(--color-brand-normal);
+}

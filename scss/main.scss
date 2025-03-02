@@ -1,104 +1,21 @@
-/* poppins-300 - latin */
-@font-face {
-    font-display: swap;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 300;
-    src: url('../fonts/poppins-v22-latin-300.woff2') format('woff2');
-}
+@import './utils/fonts';
+@import './utils/variables';
 
+@import './base';
 
-@font-face {
-    font-display: swap;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/poppins-v22-latin-regular.woff2') format('woff2');
-}
+@import './utils/utils';
 
-
-@font-face {
-    font-display: swap;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    src: url('../fonts/poppins-v22-latin-600.woff2') format('woff2');
-}
-
-
-@font-face {
-    font-display: swap;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 900;
-    src: url('../fonts/poppins-v22-latin-900.woff2') format('woff2');
-}
-
-
-:root{
-    --color-primary-light: #FAF4EA;
-    --color-primary-dark: #31261A;
-    --color-secondary-dark: #A18268;
-    --color-brand-normal:#819B57;
-    --color-brand-dark: #465929;
-    --color-brand-light: #CFCFBC;
-
-}
-
-/*********************** BASE ************************/
-
-*,
-*::after,
-*::before {
-    box-sizing: border-box;
-}
-
-body{
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    color: var(--color-primary-dark);
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.5;
-    background-color: var(--color-primary-light);
-}
-
-h1,h2,h3,h4,h5,h6,p{
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-ul,ol{
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style-type: none;
-    text-decoration: none;
-}
-
-a {
- display: inline-block;
-}
-
-address{
-    font-style: normal;
-}
-
-.hidden {
-    position: absolute;
-    left: -10000px;
-    top: auto;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-}
+@import './components/header';
+@import './components/links';
+@import './components/buttons';
+@import './components/hero-section';
 
 .section {
     padding-top: 48px;
     padding-bottom: 48px;
 }
 
-.container{
+.container {
     width: 100%;
     max-width: 1288px;
     margin: 0 auto;
@@ -117,131 +34,55 @@ address{
 
 /*********************** HEADER ************************/
 
-.header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding-top: 32px;
-}
-
-.header-container{
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.header-nav{
-    display: flex;
-    flex-grow: 1;
-    align-items: center;
-    gap: 40px;
-}
-
-.header-list{
-    display: flex;
-    gap: 64px;
-    flex-grow: 1;
-    justify-content: center;
-}
-
-
-.nav-link{
-    color: var(--color-primary-light);
-    text-decoration: none;
-    transition: color .3s ease;
-}
-
-.nav-link:hover,:focus{
-    color: var(--color-brand-normal);
-}
-
-.button{
-    color: var(--color-primary-light);
-    background-color: var(--color-brand-normal);
-    border: 2px solid var(--color-brand-normal);
-    border-radius: 8px;
-    padding: 16px 32px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: color .3s ease, background-color .3s ease;
-}
-
-.button:hover{
-    background-color:transparent;
-    color: var(--color-brand-dark);
-}
-
-/*********************** HERO ************************/
-
-.hero-section{
-    padding: 272px 0;
-    background-image: linear-gradient(102.76deg, rgba(18, 18, 17, 0.78) 2.03%, rgba(18, 18, 17, 0.6) 58.46%, rgba(18, 18, 17, 0) 90.36%),url(./images/Background-hero.jpg);
-    background-color: var(--color-primary-dark);
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: cover;
-}
-
-.hero-title{
-    color: var(--color-primary-light);
-    text-align: center;
-    font-size: 128px;
-    font-weight: 900;
-}
-
-.hero-title .accent{
-    color: var(--color-brand-normal);
-}
 
 
 /*********************** ADVANTAGES ************************/
 
 
-.advantages-section{
+.advantages-section {
     background-color: var(--color-brand-normal);
     padding: 16px 0;
 }
 
 
-.advantages-list{
+.advantages-list {
     display: flex;
     justify-content: space-between;
     gap: 40px;
 }
 
-.advantages-item{
+.advantages-item {
     font-size: 20px;
     font-weight: 300;
     color: var(--color-primary-light);
 }
 
 
-.section-title .accent{
+.section-title .accent {
     color: var(--color-brand-dark);
 }
 
 /*********************** TRADITIONS ************************/
 
-.tradition-section{
+.tradition-section {
     padding-top: 96px;
 }
 
-.traditions-container{
+.traditions-container {
     display: flex;
     justify-content: space-between;
     gap: 40px;
 }
 
-.traditions-content{
+.traditions-content {
     max-width: 710px;
 }
 
-.taditions-title{
+.taditions-title {
     margin-bottom: 42px;
 }
 
-.tradition-text .brand{
+.tradition-text .brand {
     font-weight: 600;
 }
 
@@ -249,15 +90,15 @@ address{
     text-transform: uppercase;
 }
 
-.tradition-text{
+.tradition-text {
     margin-bottom: 40px;
 }
 
-.tradition-text.limited{
+.tradition-text.limited {
     max-width: 330px;
 }
 
-.brand{
+.brand {
     color: var(--color-brand-normal);
 }
 
@@ -266,13 +107,13 @@ address{
 
 /*********************** CHEFS ************************/
 
-.chefs-title{
+.chefs-title {
     margin: 0 auto 80px;
     position: relative;
 }
 
 .chefs-title::before,
-.chefs-title::after{
+.chefs-title::after {
     content: "";
     width: 352px;
     display: block;
@@ -281,42 +122,42 @@ address{
     bottom: 24px;
 }
 
-.chefs-title::before{
+.chefs-title::before {
     left: 0;
 }
 
-.chefs-title::after{
+.chefs-title::after {
     right: 0;
 }
 
-.chef-title{
+.chef-title {
     margin-bottom: 16px;
     font-weight: 600;
     font-size: 40px;
-    
+
 }
 
-.chefs-list{
+.chefs-list {
     display: flex;
     gap: 40px 30px;
     flex-wrap: wrap;
 }
 
-.chefs-item{
+.chefs-item {
     flex-basis: calc((100% - 30px) / 2);
 }
 
-.chefs-card{
+.chefs-card {
     display: flex;
     gap: 30px;
 }
 
-.chefs-image{
+.chefs-image {
     border-radius: 4px 4px 4px 200px;
     box-shadow: -16px 16px 0 0 var(--color-primary-light), -16px 16px 0 2px var(--color-secondary-dark);
 }
 
-.chefs-text p:not(:last-child){
+.chefs-text p:not(:last-child) {
     margin-bottom: 24px;
 }
 
@@ -324,17 +165,17 @@ address{
 
 /*********************** FORMAT ************************/
 
-.format-title{
+.format-title {
     margin-bottom: 80px;
 }
 
-.formats-container{
+.formats-container {
     display: flex;
     gap: 32px;
     align-items: center;
 }
 
-.carousel-button{
+.carousel-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -342,26 +183,27 @@ address{
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color:transparent;
+    background-color: transparent;
     border: 1px solid var(--color-primary-dark);
     cursor: pointer;
 }
 
-.carousel-arrow{
+.carousel-arrow {
     fill: var(--color-primary-dark);
     transition: background-colo .3s, fill .3s;
 }
 
-.carousel-button:hover,:focus{
+.carousel-button:hover,
+:focus {
     background-color: var(--color-primary-dark);
 }
 
-.carousel-button:hover
-.carousel-arrow, .carousel-button:focus .carousel-arrow{
+.carousel-button:hover .carousel-arrow,
+.carousel-button:focus .carousel-arrow {
     fill: var(--color-primary-light);
 }
 
-.format-list{
+.format-list {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -369,11 +211,11 @@ address{
     align-items: stretch;
 }
 
-.format-item{
-    flex-basis: calc((100%-40px)/3);
+.format-item {
+    flex-basis: calc((100% - 40px)/3);
 }
 
-.format-card{
+.format-card {
     padding: 24px;
     height: 444px;
     border-radius: 16px;
@@ -385,49 +227,49 @@ address{
     /* background-image: url(./images/walrus.jpg);  */
 }
 
-.format-card:hover{
+.format-card:hover {
     transform: scale(1.1);
 }
 
 
 
 
-.format-article-title{
+.format-article-title {
     font-weight: 600;
     font-size: 24px;
     color: var(--color-primary-light);
     margin-bottom: 24px;
 }
 
-.format-text{
+.format-text {
     color: var(--color-primary-light);
     font-weight: 300;
     font-size: 14px;
-    
+
 }
 
 
 /*********************** CONTACTS ************************/
 
-.contacts-section{
+.contacts-section {
     padding-bottom: 96px;
 }
 
-.contacts-container{
+.contacts-container {
     display: flex;
     gap: 32px;
 }
 
-.contacts-title{
+.contacts-title {
     margin-bottom: 16px;
 }
 
-.contacts-text{
+.contacts-text {
     color: var(--color-brand-dark);
     margin-bottom: 48px;
 }
 
-.contacts-map{
+.contacts-map {
     flex-shrink: 0;
     border: none;
     border-radius: 16px;
@@ -435,7 +277,7 @@ address{
 
 /*********************** FOOTER ************************/
 
-.footer{
+.footer {
     padding: 32px 0;
     background-image: url(./images/footer-background.png);
     background-color: var(--color-primary-dark);
@@ -446,14 +288,14 @@ address{
 }
 
 .footer::before,
-.footer::after{
+.footer::after {
     position: absolute;
     background-repeat: no-repeat;
     content: "";
     bottom: 0;
 }
 
-.footer::before{
+.footer::before {
     background-image: url(./images/bread.png);
     width: 180px;
     height: 120px;
@@ -467,37 +309,37 @@ address{
     right: 0;
 }
 
-.footer-container{
+.footer-container {
     display: flex;
     gap: 20px;
-    
+
 }
 
-.footer-nav{
+.footer-nav {
     flex-basis: 50%;
     display: flex;
     gap: 20px;
 }
 
-.footer-logo{
+.footer-logo {
     flex-grow: 1;
 }
 
-.footer-nav-list{
+.footer-nav-list {
     flex-grow: 1;
 }
 
-.footer-address{
+.footer-address {
     flex-basis: 50%;
     display: flex;
     gap: 20px;
 }
 
-.footer-address-list{
+.footer-address-list {
     flex-grow: 1;
 }
 
-.address-link{
+.address-link {
     color: var(--color-primary-light);
     font-weight: 300;
     font-size: 16px;
@@ -505,24 +347,26 @@ address{
     transition: color .3s;
 }
 
-.address-link:hover,:focus{
+.address-link:hover,
+:focus {
     color: var(--color-brand-normal);
 }
 
-.address-social{
+.address-social {
     fill: var(--color-primary-light);
     transition: fill .3s;
 }
 
-.address-social:hover,:focus {
+.address-social:hover,
+:focus {
     fill: var(--color-brand-normal);
 }
 
-.address-info{
+.address-info {
     flex-grow: 1;
 }
 
-.address-copyright{
+.address-copyright {
     font-size: 14px;
     color: #A18268;
 }
@@ -544,7 +388,7 @@ address{
     transition: opacity .3s, visibility .3s;
 }
 
-.backdrop.is-hidden{
+.backdrop.is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -560,10 +404,10 @@ address{
     border-radius: 32px;
     position: relative;
     overflow-y: auto;
-    
+
 }
 
-.modal-btn-close{
+.modal-btn-close {
     position: absolute;
     top: 40px;
     right: 40px;
@@ -571,11 +415,11 @@ address{
     background-color: var(--color-primary-light);
 }
 
-.modal-title{
+.modal-title {
     margin-bottom: 8px;
 }
 
-.modal-text{
+.modal-text {
     color: var(--color-brand-dark);
     margin-bottom: 72px;
     text-align: center;
@@ -585,12 +429,12 @@ address{
 /*********************** FORM ************************/
 
 
-.form-field{
+.form-field {
     margin-bottom: 32px;
     position: relative;
 }
 
-.form-label{
+.form-label {
     position: absolute;
     top: 16px;
     left: 42px;
@@ -600,7 +444,7 @@ address{
     transition: transform .3s, color .3s; */
 }
 
-.form-input{
+.form-input {
     padding: 16px 42px;
     width: 100%;
     font-size: 16px;
@@ -611,19 +455,19 @@ address{
     transition: border-color 0.3s;
 }
 
-.form-input:focus{
+.form-input:focus {
     border-color: var(--color-brand-normal);
     /* outline: none; */
 }
 
-.form-input::placeholder{
+.form-input::placeholder {
     color: var(--color-secondary-dark);
     font-size: 16px;
     line-height: 1.17;
     transition: color .3s;
 }
 
-.form-input:focus::placeholder{
+.form-input:focus::placeholder {
     color: var(--color-primary-dark);
 }
 
@@ -632,12 +476,12 @@ address{
     color: var(--color-primary-dark);
 } */
 
-.form-btn{
+.form-btn {
     display: block;
     margin: 0 auto 24px;
 }
 
-.form-terms{
+.form-terms {
     max-width: 220px;
     margin: 0 auto;
     font-weight: 500;
@@ -646,7 +490,7 @@ address{
     text-align: center;
 }
 
-.form-terms-link{
+.form-terms-link {
     color: var(--color-primary-dark);
     text-underline-offset: 2px;
 }
