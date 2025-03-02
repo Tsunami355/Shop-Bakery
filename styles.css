@@ -376,16 +376,21 @@ address{
 .format-card{
     padding: 24px;
     height: 444px;
-    border: 1px solid lightgreen; /*remuve*/
     border-radius: 16px;
     max-width: 349px;
     background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%);
     transition: transform 0.3s;
+    position: relative;
+    border: 1px solid #111;
+    /* background-image: url(./images/walrus.jpg);  */
 }
 
 .format-card:hover{
     transform: scale(1.1);
 }
+
+
+
 
 .format-article-title{
     font-weight: 600;
@@ -398,6 +403,7 @@ address{
     color: var(--color-primary-light);
     font-weight: 300;
     font-size: 14px;
+    
 }
 
 
