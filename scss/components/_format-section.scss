@@ -26,15 +26,16 @@
 }
 
 .format-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     padding: 24px;
     height: 444px;
     border-radius: 16px;
     max-width: 349px;
     background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%);
     transition: transform 0.3s;
-    position: relative;
-    border: 1px solid #111;
-    //  background-image: url(./images/walrus.jpg);  
 }
 
 .format-card:hover {
@@ -53,4 +54,13 @@
     font-weight: 300;
     font-size: 14px;
 
+}
+
+.format-images{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
