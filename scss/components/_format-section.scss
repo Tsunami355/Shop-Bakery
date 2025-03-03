@@ -1,0 +1,56 @@
+.format-title {
+    margin-bottom: 80px;
+}
+
+.formats-container {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.carousel-arrow {
+    fill: var(--color-primary-dark);
+    transition: background-colo .3s, fill .3s;
+}
+
+.format-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.format-item {
+    flex-basis: calc((100% - 40px)/3);
+}
+
+.format-card {
+    padding: 24px;
+    height: 444px;
+    border-radius: 16px;
+    max-width: 349px;
+    background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--color-primary-dark) 100%);
+    transition: transform 0.3s;
+    position: relative;
+    border: 1px solid #111;
+    //  background-image: url(./images/walrus.jpg);  
+}
+
+.format-card:hover {
+    transform: scale(1.1);
+}
+
+.format-article-title {
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--color-primary-light);
+    margin-bottom: 24px;
+}
+
+.format-text {
+    color: var(--color-primary-light);
+    font-weight: 300;
+    font-size: 14px;
+
+}
