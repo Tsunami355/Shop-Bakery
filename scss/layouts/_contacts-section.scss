@@ -1,23 +1,31 @@
 .contacts-section {
     padding-bottom: 96px;
-}
 
-.contacts-container {
-    display: flex;
-    gap: 32px;
-}
+    &__container {
+            display: flex;
+            gap: 32px;
+        }
 
-.contacts-title {
-    margin-bottom: 16px;
-}
+    &__title {
+        margin-bottom: 16px;
+    }
 
-.contacts-text {
-    color: var(--color-brand-dark);
-    margin-bottom: 48px;
-}
+    &__text {
+        margin-bottom: 48px;
+    }
 
-.contacts-map {
-    flex-shrink: 0;
-    border: none;
-    border-radius: 16px;
+    &__form-field{
+        margin-bottom: 24px;
+    }
+
+    &__map {
+        flex-shrink: 0;
+        border: none;
+        border-radius: 16px;
+    }
+
+    &__form-btn {
+        display: block;
+        margin: 0 auto 24px;
+    }
 }
