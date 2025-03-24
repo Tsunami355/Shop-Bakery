@@ -1,4 +1,5 @@
 .mobile-menu{
+    padding: 16px 24px;
     position: fixed;
     top: 0;
     right: 0;
@@ -6,9 +7,20 @@
     height: 100%;
     background-color: var(--color-primary-light);
     transform: translateX(100%);
-    transition: transform 1s;
+    transition: transform 0.3s;
+    
 
-    &__is-open{
+    &.is-open{
         transform: translateX(0);
+    }
+
+    &__btn-close{
+        position: absolute;
+        top: 16px;
+        right: 24px;
+    }
+
+    &__menu{
+        color: var(--color-primary-dark);
     }
 }
