@@ -1,34 +1,45 @@
 .shefs-section{
     &__title {
-            margin: 0 auto 80px;
+            margin: 0 auto 24px;
             position: relative;
-
-            &::before,
-            &::after {
-                content: "";
-                width: 352px;
-                display: block;
-                border: 2px solid var(--color-brand-light);
-                position: absolute;
-                bottom: 24px;
+      
+            @media screen and (min-width: 1280px) {
+                margin-bottom: 80px;
+                &::before,
+                &::after {
+                    content: "";
+                    width: 352px;
+                    display: block;
+                    border: 2px solid var(--color-brand-light);
+                    position: absolute;
+                    bottom: 24px;
+                    }
+                
+                &::before {
+                    left: 0;
+                    }
+                
+                &::after {
+                    right: 0;
+                    }
+                }
             }
-        
-            &::before {
-                left: 0;
-            }
-        
-            &::after {
-                right: 0;
-            }
-        }
-
+    
     &__list {
         display: flex;
-        gap: 40px 30px;
+        flex-direction: column;
+        gap: 20px;
         flex-wrap: wrap;
+
+        @media screen and (min-width: 768px) {
+            gap: 40px 30px;
+            flex-direction: row;
+            }
     }
 
     &__item {
-        flex-basis: calc((100% - 30px) / 2);
+        @media screen and (min-width: 768px) {
+            flex-basis: calc((100% - 30px) / 2);
+        }
     }
 }
