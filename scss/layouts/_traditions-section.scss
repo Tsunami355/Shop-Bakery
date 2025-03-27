@@ -1,5 +1,6 @@
 .tradition-section {
     padding-top: 40px;
+
     @media screen and (min-width: 768px) {
         padding-top: 96px;
     }
@@ -16,11 +17,19 @@
         }
     
     &__title {
-            margin-bottom: 42px;
+            margin-bottom: 24px;
+
+            @media screen and (min-width: 768px) {
+                margin-bottom: 42px;
+            }
         }
 
     &__text {
             margin-bottom: 40px;
+
+            &:last-child {
+                    margin-bottom: 0;
+                }
         }
 
     &__text {
