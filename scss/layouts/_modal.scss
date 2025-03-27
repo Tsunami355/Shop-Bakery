@@ -1,5 +1,5 @@
 .backdrop {
-    padding: 20px 0;
+    padding: 20px;
     position: fixed;
     top: 0;
     right: 0;
@@ -18,10 +18,8 @@
         }
 }
 
-
-
 .modal {
-    padding: 120px;
+    padding: 32px;
     width: 100%;
     max-width: 880px;
     height: 100%;
@@ -31,12 +29,21 @@
     position: relative;
     overflow-y: auto;
 
+    @media screen and (min-width: 768px) {
+        padding: 120px;
+    }
+
     &__btn-close {
             position: absolute;
-            top: 40px;
-            right: 40px;
+            top: 12px;
+            right: 12px;
             border: none;
             background-color: var(--color-primary-light);
+
+            @media screen and (min-width: 768px) {
+                top: 40px;
+                right: 40px;
+            }
         }
 
     &__form-field{
