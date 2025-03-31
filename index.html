@@ -3,13 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shop Bakery</title>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap"
-      rel="stylesheet"
-    /> -->
+    <title>Сучасна пекарня</title>
     <link rel="stylesheet" href="./css/main.min.css" />
     <link
       rel="stylesheet"
@@ -49,26 +43,37 @@
           </button>
           <div class="mobile-menu">
             <button class="mobile-menu__btn-close menu-btn-close" type="button">
-              Close
+              <svg width="24" height="24">
+                <use href="./images/symbol-defs.svg#icon-close"></use>
+              </svg>
             </button>
+            <a class="mobile-menu__logo" href="/">
+              <img src="./images/logo.svg" alt="Логотип сучасної пекарні" />
+            </a>
             <nav class="mobile-menu-nav">
               <a href="./index.html"
                 ><img src="./images/logo.svg" alt="Логотип сучасної пекарні"
               /></a>
-              <ul class="mobile-menu__menu">
-                <li class="mobile-menu-item">
-                  <a class="nav-link" href="#tradition-section"
-                    >Наші традиції</a
+              <ul class="mobile-menu__list">
+                <li>
+                  <a class="mobile-menu__link" href="#traditions-section">
+                    Наші традиції
+                  </a>
+                </li>
+                <li>
+                  <a class="mobile-menu__link" href="#chefs-section">
+                    Шеф-кухарі
+                  </a>
+                </li>
+                <li>
+                  <a class="mobile-menu__link" href="#formats-section"
+                    >Формати</a
                   >
                 </li>
-                <li class="mobile-menu-item">
-                  <a class="nav-link" href="#chefs-section">Шеф-кухарі</a>
-                </li>
-                <li class="mobile-menu-item">
-                  <a class="nav-link" href="#format-section">Формати</a>
-                </li>
-                <li class="mobile-menu-item">
-                  <a class="nav-link" href="#contacts-section">Контакти</a>
+                <li>
+                  <a class="mobile-menu__link" href="#contact-section">
+                    Контакти
+                  </a>
                 </li>
               </ul>
             </nav>
